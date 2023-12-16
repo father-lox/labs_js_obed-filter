@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.form-sorter {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.go-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    height: 50px;
+    border-radius: 5px;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+    z-index: 1;
+}
+
+.go-to-top__hidden {
+    transform: translateY(60px);
+    opacity: 0;
+}
+
+.go-to-top__shown {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sorter__label {
+    border-radius: 4px;
+    display: flex;
+    padding: 3px;
+}
+
+.sorter__label svg {
+    width: 25px;
+}
+
+.sorter__field:checked + .sorter__label {
+    background-color: #fe5f00;
+}
+
+.sorter__field:checked + .sorter__label svg {
+    fill: white;
+}
+
+.sorter__field {
+    display: none;
+}
